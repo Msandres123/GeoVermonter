@@ -1,0 +1,73 @@
+/*--style for the body, essentially just alters the background color--*/
+body {
+  background-color: cadetblue;
+  font-family: "Permanent Marker", cursive;
+}
+
+/*---styling for the Application itself, aligns the content to the center---*/
+.App {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+/*---Aligns the map, info-bar and guess modal in a row---*/
+.MapInfoBarWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/*--Info-bar styling--*/
+.InfoBar {
+  background-color: grey;
+  height: 35vh;
+  width: 30vw;
+  margin-left: 10px;
+}
+/*--styling for the direction buttons--*/
+.directionButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35vh;
+  margin-right: 10px;
+  margin-top: 25px;
+}
+/*--Wrapper for the game button--*/
+
+.gameButtonWrap {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-right: 350px;
+}
+.gameButton {
+  height: 5vh;
+  text-align: center;
+  background-color: grey;
+  padding: 7px;
+  display: inline-block;
+  width: 130px;
+  margin-left: 15px;
+}
+/*--style for the buttons-- */
+
+.buttonStyle {
+  display: flex;
+  background-color: Grey;
+  margin-top: 10px;
+  padding: 10px;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+/*---game-info---*/
+.game-info {
+  text-align: center;
+  margin-right: 170px;
+  padding-top: -50px;
+}
