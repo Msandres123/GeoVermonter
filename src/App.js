@@ -165,6 +165,7 @@ function App() {
         {guessBox && (
           <Counties
             score={score}
+            setScore={setScore}
             guessBox={setGuessBox}
             latRandom={latRandom}
             longRandom={longRandom}

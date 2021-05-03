@@ -16,7 +16,7 @@ function Counties(props) {
   //const [countyData, setCountyData] = useState({})
   const [data, setData] = useState();
   const [buttonToggle, setToggle] = useState(true);
-  const [score, setScore] = useState(props.score);
+  // const [score, setScore] = useState(props.score);
   let cancel = false
 
 
@@ -44,7 +44,7 @@ function Counties(props) {
       // here the player selected and the real fetched coordinated are compared
       if (countySelected !== countyCompare) {
         // when guess is wrong, the score is decreased
-        setScore(score - 10);
+        props.setScore(props.score - 10);
         setToggle(true);
         alert("hoooo! Wrong Guess, Try Again");
       } else {
@@ -79,7 +79,7 @@ function Counties(props) {
       {/* until user guess the county , this will be shown in the info bar*/}
       {buttonToggle && (
         <InfoBar
-          score={score}
+         score={props.score}
           county={"?"}
           town={"?"}
           latitude={"?"}
@@ -89,7 +89,7 @@ function Counties(props) {
       {/* Once player guesses the county, the complete info will be fetched and displayed here*/}
       {!buttonToggle && (
         <InfoBar
-          score={score}
+          score={props.score}
           county={countyCompare}
           latitude={props.latRandom}
           longitude={props.longRandom}
@@ -104,7 +104,7 @@ function Counties(props) {
       )}
       {cancel && (
         <InfoBar
-          score={score}
+          score={props.score}
           county={countyCompare}
           latitude={props.latRandom}
           longitude={props.longRandom}
